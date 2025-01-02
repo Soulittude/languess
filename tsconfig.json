@@ -1,19 +1,24 @@
 {
+  "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
     "jsx": "react",
     "target": "es2022",
     "module": "es2022",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "useUnknownInCatchVariables": false,
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "expo-sqlite": [
-        "node_modules/expo-sqlite"
-      ]
-    }
+    "baseUrl": "."
   },
-  "extends": "expo/tsconfig.base"
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

@@ -53,27 +53,49 @@ export const WordsGame = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const getWordsForCategory = (data: any, categoryId: string): string[] => {
+    // Helper function to split array into two parts
+    const splitArray = (arr: string[]): [string[], string[]] => {
+      const midPoint = Math.ceil(arr.length / 2);
+      return [arr.slice(0, midPoint), arr.slice(midPoint)];
+    };
+  
     switch (categoryId) {
       case 'basic':
         return data.basic;
-      case 'pronouns1':
-        return [...data.pronouns.personal.subject, ...data.pronouns.personal.object];
-      case 'pronouns2':
-        return [...data.pronouns.possessive, ...data.pronouns.interrogative, ...data.pronouns.demonstrative];
-      case 'verbs1':
-        return data.verbs.action.slice(0, Math.ceil(data.verbs.action.length / 2));
-      case 'verbs2':
-        return [...data.verbs.action.slice(Math.ceil(data.verbs.action.length / 2)), ...data.verbs.helping];
-      case 'nouns1':
-        return [...data.nouns.abstract, ...data.nouns.people, ...data.nouns.places];
-      case 'nouns2':
-        return [...data.nouns.things, ...data.nouns.time_related, ...data.nouns.numbers, ...data.nouns.uncategorized];
+      case 'pronouns1': {
+        const [firstHalf] = splitArray(data.pronouns);
+        return firstHalf;
+      }
+      case 'pronouns2': {
+        const [, secondHalf] = splitArray(data.pronouns);
+        return secondHalf;
+      }
+      case 'verbs1': {
+        const [firstHalf] = splitArray(data.verbs);
+        return firstHalf;
+      }
+      case 'verbs2': {
+        const [, secondHalf] = splitArray(data.verbs);
+        return secondHalf;
+      }
+      case 'nouns1': {
+        const [firstHalf] = splitArray(data.nouns);
+        return firstHalf;
+      }
+      case 'nouns2': {
+        const [, secondHalf] = splitArray(data.nouns);
+        return secondHalf;
+      }
       case 'determiners':
         return data.determiners;
-      case 'adjectives1':
-        return data.adjectives.slice(0, Math.ceil(data.adjectives.length / 2));
-      case 'adjectives2':
-        return data.adjectives.slice(Math.ceil(data.adjectives.length / 2));
+      case 'adjectives1': {
+        const [firstHalf] = splitArray(data.adjectives);
+        return firstHalf;
+      }
+      case 'adjectives2': {
+        const [, secondHalf] = splitArray(data.adjectives);
+        return secondHalf;
+      }
       case 'adverbs':
         return data.adverbs;
       case 'prepositions':
@@ -135,7 +157,7 @@ export const WordsGame = () => {
   
     try {
       const { sound: loadedSound } = await Audio.Sound.createAsync(
-        require('../Assets/Sounds/correct.mp3')
+        require('../assets/Sounds/correct.mp3')
       );
       sound = loadedSound;
       await sound.playAsync();

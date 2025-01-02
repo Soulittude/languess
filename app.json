@@ -1,6 +1,8 @@
 {
   "expo": {
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "name": "Languess",
     "slug": "Languess",
     "platforms": [
@@ -9,11 +11,12 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./Assets/icon.png",
+    "assets": ["./assets/*"],
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./Assets/splash-icon.png",
+      "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,7 +24,7 @@
       "package": "com.mynewapp"
     },
     "web": {
-      "favicon": "./Assets/favicon.png"
+      "favicon": "./assets/favicon.png"
     },
     "extra": {
       "eas": {
@@ -52,7 +55,8 @@
             ]
           }
         }
-      ]
+      ],
+      "expo-asset"
     ]
   }
 }

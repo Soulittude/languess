@@ -8,16 +8,16 @@ import { Image } from 'react-native';
 const { width } = Dimensions.get('window');
 
 const languages = [
-  { code: 'tr', name: 'Türkçe', icon: require('../Assets/Flags/tr.png') },
-  { code: 'en', name: 'English', icon: require('../Assets/Flags/en.png') },
-  { code: 'ru', name: 'Русский', icon: require('../Assets/Flags/ru.png') },
-  { code: 'es', name: 'Español', icon: require('../Assets/Flags/es.png') },
-  { code: 'ar', name: 'العربية', icon: require('../Assets/Flags/ar.png') },
-  { code: 'fr', name: 'Français', icon: require('../Assets/Flags/fr.png') },
-  { code: 'de', name: 'Deutsch', icon: require('../Assets/Flags/de.png') },
-  { code: 'ja', name: '日本語', icon: require('../Assets/Flags/ja.png') },
-  { code: 'pt', name: 'Português', icon: require('../Assets/Flags/pt.png') },
-  { code: 'fa', name: 'فارسی', icon: require('../Assets/Flags/fa.png') },
+  { code: 'tr', name: 'Türkçe', icon: require('../assets/Flags/tr.png') },
+  { code: 'en', name: 'English', icon: require('../assets/Flags/en.png') },
+  { code: 'ru', name: 'Русский', icon: require('../assets/Flags/ru.png') },
+  { code: 'es', name: 'Español', icon: require('../assets/Flags/es.png') },
+  { code: 'ar', name: 'العربية', icon: require('../assets/Flags/ar.png') },
+  { code: 'fr', name: 'Français', icon: require('../assets/Flags/fr.png') },
+  { code: 'de', name: 'Deutsch', icon: require('../assets/Flags/de.png') },
+  { code: 'ja', name: '日本語', icon: require('../assets/Flags/ja.png') },
+  { code: 'pt', name: 'Português', icon: require('../assets/Flags/pt.png') },
+  { code: 'fa', name: 'فارسی', icon: require('../assets/Flags/fa.png') },
 ];
 
 const STORAGE_KEYS = {
