@@ -28,7 +28,7 @@ const CATEGORIES = [
   { id: 'adverbs', titleKey: 'Adverbs' },
   { id: 'prepositions', titleKey: 'Prepositions' },
 ];
-
+//d
 export const SentencesCategory = () => {
   const navigation = useNavigation<SentencesCategoryNavigationProp>();
   const { t } = useTranslation(); // Access the translation function
