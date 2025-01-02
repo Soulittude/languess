@@ -154,7 +154,7 @@ export const SentencesGame = () => {
 
   const playSound = async () => {
     try {
-      const { sound } = await Audio.Sound.createAsync(require('../assets/Sounds/correct.mp3'));
+      const { sound } = await Audio.Sound.createAsync(require('../Assets/Sounds/correct.mp3'));
       await sound.playAsync();
       sound.setOnPlaybackStatusUpdate((status: AVPlaybackStatus) => {
         if (status.isLoaded && status.didJustFinish) {

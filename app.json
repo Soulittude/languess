@@ -11,12 +11,11 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "assets": ["./assets/*"],
-    "icon": "./assets/icon.png",
+    "icon": "./Assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./Assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -24,7 +23,7 @@
       "package": "com.mynewapp"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./Assets/favicon.png"
     },
     "extra": {
       "eas": {

@@ -157,7 +157,7 @@ export const WordsGame = () => {
   
     try {
       const { sound: loadedSound } = await Audio.Sound.createAsync(
-        require('../assets/Sounds/correct.mp3')
+        require('../Assets/Sounds/correct.mp3')
       );
       sound = loadedSound;
       await sound.playAsync();
