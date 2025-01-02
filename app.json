@@ -1,0 +1,58 @@
+{
+  "expo": {
+    "assetBundlePatterns": ["**/*"],
+    "name": "Languess",
+    "slug": "Languess",
+    "platforms": [
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./Assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./Assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "android": {
+      "package": "com.mynewapp"
+    },
+    "web": {
+      "favicon": "./Assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1e8e3470-b2ed-4315-be7b-8d240534ad46"
+      }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26
+          }
+        }
+      ],
+      [
+        "expo-sqlite",
+        {
+          "enableFTS": true,
+          "useSQLCipher": true,
+          "android": {
+            "enableFTS": false,
+            "useSQLCipher": false
+          },
+          "ios": {
+            "customBuildFlags": [
+              "-DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_ENABLE_SNAPSHOT=1"
+            ]
+          }
+        }
+      ]
+    ]
+  }
+}
