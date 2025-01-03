@@ -54,6 +54,7 @@ export const SentencesGame = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const getSentencesForCategory = (data: any, categoryId: string): string[] => {
+    // Helper function to split array into two parts
     const splitArray = (arr: string[]): [string[], string[]] => {
       const midPoint = Math.ceil(arr.length / 2);
       return [arr.slice(0, midPoint), arr.slice(midPoint)];
@@ -120,7 +121,7 @@ export const SentencesGame = () => {
       setTargetSentences(targetSentencesList);
       setIsLoading(false);
     } catch (error) {
-      console.error('Error loading sentences:', error);
+      console.error('Error loading Sentences:', error);
       setIsLoading(false);
     }
   };

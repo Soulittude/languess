@@ -24,7 +24,7 @@ const CATEGORIES = [
   { id: 'nouns2', titleKey: 'Nouns 2' },
   { id: 'determiners', titleKey: 'Determiners' },
   { id: 'adjectives1', titleKey: 'Adjectives 1' },
-  { id: 'adjectives-2', titleKey: 'Adjectives 2' },
+  { id: 'adjectives2', titleKey: 'Adjectives 2' },
   { id: 'adverbs', titleKey: 'Adverbs' },
   { id: 'prepositions', titleKey: 'Prepositions' },
 ];

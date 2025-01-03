@@ -162,7 +162,6 @@ export const WordsGame = () => {
       sound = loadedSound;
       await sound.playAsync();
   
-      // Sound'un bitişini bekleyip temizleme işlemini düzgün yapalım
       sound.setOnPlaybackStatusUpdate((status: AVPlaybackStatus) => {
         if (status.isLoaded && status.didJustFinish) {
           sound?.unloadAsync().catch(() => {}); // Hata olursa crash'i önlemek için boş catch
